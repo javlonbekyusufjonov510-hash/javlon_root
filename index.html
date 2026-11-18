@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JAVLON ROOT</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;
+ background:#080b12;
+ color:white;
+ font-family:Arial,sans-serif;
+ text-align:center;
+ padding:20px;
+}
+.container{max-width:450px;margin:auto}
+h1{color:#00e5ff;font-size:30px;letter-spacing:3px}
+.subtitle{color:#8995a8}
+.card{
+ background:#121a29;
+ border:1px solid #26364d;
+ border-radius:18px;
+ padding:22px;
+ margin:18px 0;
+}
+.price{font-size:34px;font-weight:bold;margin:12px}
+.status{color:#00e5ff}
+button{
+ width:100%;
+ padding:17px;
+ border:0;
+ border-radius:12px;
+ color:white;
+ font-size:18px;
+ font-weight:bold;
+ margin:8px 0;
+ cursor:pointer;
+}
+.buy{background:#00a86b}
+.sell{background:#d93648}
+.reset{background:#34445d}
+#result{font-size:18px;min-height:28px}
+small{color:#8995a8}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>JAVLON ROOT</h1>
+<p class="subtitle">MOBILE TRADING PANEL</p>
+
+<div class="card">
+ <small>ASSET</small>
+ <h2>XAUUSD / GOLD</h2>
+ <div class="price">---</div>
+ <div class="status">DEMO MODE</div>
+</div>
+
+<div class="card">
+ <h3>TRADE PANEL</h3>
+ <button class="buy" onclick="trade('BUY')">BUY</button>
+ <button class="sell" onclick="trade('SELL')">SELL</button>
+ <p id="result">Hozircha savdo yo‘q</p>
+ <button class="reset" onclick="resetTrade()">RESET</button>
+</div>
+
+<div class="card">
+ <h3>ACCOUNT</h3>
+ <p>Platforma: MT5</p>
+ <p>Broker: XM</p>
+ <p>Hisob: DEMO</p>
+ <p class="status">Ulanish: DEMO PANEL</p>
+</div>
+
+<small>JAVLON ROOT © 2026</small>
+<p><small>Bu sinov paneli. XM hisobiga ulanmagan.</small></p>
+</div>
+
+<script>
+function trade(type){
+ document.getElementById("result").innerText =
+ "DEMO: "+type+" bosildi. Haqiqiy savdo ochilmadi.";
+}
+function resetTrade(){
+ document.getElementById("result").innerText =
+ "Hozircha savdo yo‘q";
+}
+</script>
+</body>
+</html>
